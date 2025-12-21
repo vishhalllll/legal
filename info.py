@@ -30,7 +30,7 @@ class Config(object):
 
     # Messages
     START_PIC = getenv("START_PIC", "")
-    START_MSG = getenv("START_MESSAGE", "👋 Hello {mention},\n\nThis bot helps you store private files in a secure channel and generate special access links for sharing. 🔐📁\n\nOnly admins can upload files and generate links. Just send the file here to get started.")
+    START_MSG = getenv("START_MESSAGE", "👋 Hello {mention},\n\nI only store and send @illegalHubOfficial ZIP files to respected users.")
     FORCE_MSG = getenv("FORCE_SUB_MESSAGE", "👋 Hello {mention},\n\n<b>You need to join our updates channel before using this bot.</b>\n\n📢 Please join the required channel, then try again.")
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
@@ -44,16 +44,16 @@ class Config(object):
     PROTECT_CONTENT = getenv("PROTECT_CONTENT", "False") == "True"
     DISABLE_CHANNEL_BUTTON = getenv("DISABLE_CHANNEL_BUTTON", "False") == "True"
 
-    AUTO_DELETE_TIME = int(getenv("AUTO_DELETE_TIME", "0"))
-    AUTO_DELETE_MSG = getenv("AUTO_DELETE_MSG", "This file will be automatically deleted in {time}.")
-    AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "✅ File deleted successfully.")
+    AUTO_DELETE_TIME = int(getenv("AUTO_DELETE_TIME", "1800"))
+    AUTO_DELETE_MSG = getenv("AUTO_DELETE_MSG", "This file will be automatically deleted in 30 minutes.")
+    AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "30 Minutes is completed and your File deleted successfully.")
 
     # Token Verification (Shortlink)
-    VERIFY_MODE = getenv("VERIFY_MODE", "True").lower() in ("true", "1", "yes")
+    VERIFY_MODE = getenv("VERIFY_MODE", "False").lower() in ("true", "1", "yes")
     SHORTLINK_API = getenv("SHORTLINK_API", "")
     SHORTLINK_URL = getenv("SHORTLINK_URL", "")
     TOKEN_EXPIRE = int(getenv("TOKEN_EXPIRE", "21600"))  # default: 6 hours
     TUTORIAL = getenv("TUTORIAL", "https://t.me/shareus_open_tutorial/12")
 
     BOT_STATS_TEXT = "<b>BOT UPTIME</b>\n{uptime}"
-    USER_REPLY_TEXT = "❌ I'm a bot — please don't DM me!"
+    USER_REPLY_TEXT = "❌Bot ke msg mat kar lowdu! Bot use karna nahi ata toh ye video dekh le https://t.me/AdultHungama1/23❌"
