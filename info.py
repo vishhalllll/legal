@@ -46,7 +46,7 @@ class Config(object):
 
     AUTO_DELETE_TIME = int(getenv("AUTO_DELETE_TIME", "1800"))
     AUTO_DELETE_MSG = getenv("AUTO_DELETE_MSG", "This file will be automatically deleted in 30 minutes.")
-    AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "30 Minutes is completed and your File deleted successfully.")
+    AUTO_DEL_SUCCESS_MSG = getenv("AUTO_DEL_SUCCESS_MSG", "30 Minutes is completed and your file deleted successfully.")
 
     # Token Verification (Shortlink)
     VERIFY_MODE = getenv("VERIFY_MODE", "False").lower() in ("true", "1", "yes")
