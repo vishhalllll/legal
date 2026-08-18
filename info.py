@@ -16,8 +16,8 @@ class Config(object):
     WEB_MODE = getenv("WEB_MODE", "False").lower() in ("true", "1", "yes")
     PORT = int(getenv("PORT", "8080"))  # default port for web services
     
-    CHANNEL_ID = int(getenv("CHANNEL_ID", ""))
-    OWNER_ID = int(getenv("OWNER_ID", ""))
+    CHANNEL_ID = int(getenv("CHANNEL_ID", "-1002074173405"))
+    OWNER_ID = int(getenv("OWNER_ID", "8220957839"))
 
     # Database
     DATABASE_URL = getenv("DATABASE_URL", "")
@@ -25,17 +25,17 @@ class Config(object):
 
     # Force subscription
     #FORCE_SUB_CHANNEL = int(getenv("FORCE_SUB_CHANNEL", "0"))   
-    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "").split() if id_pattern.fullmatch(ch)))
+    FORCE_SUB_CHANNEL = list(set(int(ch) for ch in getenv("FORCE_SUB_CHANNEL", "-1003493618878").split() if id_pattern.fullmatch(ch)))
     JOIN_REQUEST_ENABLE = getenv("JOIN_REQUEST_ENABLED", None)
 
     # Messages
     START_PIC = getenv("START_PIC", "")
-    START_MSG = getenv("START_MESSAGE", "👋 Hello {mention},\n\nI only store and send @illegalHubOfficial ZIP files to respected users.")
+    START_MSG = getenv("START_MESSAGE", "👋 Hello {mention},\n\nI only store and send @TheKaiVerse ZIP files to respected users.")
     FORCE_MSG = getenv("FORCE_SUB_MESSAGE", "👋 Hello {mention},\n\n<b>You need to join our updates channel before using this bot.</b>\n\n📢 Please join the required channel, then try again.")
     CUSTOM_CAPTION = getenv("CUSTOM_CAPTION", None)
 
     # ✅ Secure ADMINS (only numeric IDs)
-    admins = getenv("ADMINS", "").split()
+    admins = getenv("ADMINS", "6936205602").split()
     ADMINS = list(set(
         [int(x) for x in admins if x.isdigit()] + [OWNER_ID]
     ))
